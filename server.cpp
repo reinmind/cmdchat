@@ -13,9 +13,9 @@ void server::startServer()
     connect(chatServer,SIGNAL(newConnection()),this,
             SLOT(newClientConnection()));
 
-    if(chatServer->listen(QHostAddress::Any,8001))
+    if(chatServer->listen(QHostAddress::Any,8002))
     {
-        qDebug() << "Server has started. Listening to port 8001";
+        qDebug() << "Server has started. Listening to port 8002";
     }
     else
     {
